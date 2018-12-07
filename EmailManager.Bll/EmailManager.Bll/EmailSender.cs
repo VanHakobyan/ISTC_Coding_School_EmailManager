@@ -36,7 +36,7 @@ namespace EmailManager.Bll
                 return
                     templateText.Replace("{FullName}", contact.FullName)
                      .Replace("{Company}", contact.CompanyName)
-                     .Replace("{ImageUrl}", $"")
+                     .Replace("{ImageUrl}", @"https://github.com/VanHakobyan/ISTC_Coding_School_EmailManager/blob/master/EmailManager.Bll/EmsilSender.Console.Test/Statics/Template.jpg?raw=true")
                      .Replace("{DateTimeNow}", DateTime.UtcNow.ToString(CultureInfo.InvariantCulture));
             }
             catch
