@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Globalization;
 using System.IO;
 using System.Net;
@@ -10,6 +11,7 @@ namespace EmailManager.Bll
 {
     public class EmailSender
     {
+        private static readonly string ImageUrl = ConfigurationManager.AppSettings["ImageUrl"];
         private List<ContactResponseModel> contactResponseModels;
 
         public EmailSender()
@@ -32,11 +34,11 @@ namespace EmailManager.Bll
         {
             try
             {
-                var templateText = File.ReadAllText("E:\\Template.html");
+                var templateText = File.ReadAllText($"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName}\\statics\\Template.html");
                 return
                     templateText.Replace("{FullName}", contact.FullName)
                      .Replace("{Company}", contact.CompanyName)
-                     .Replace("{ImageUrl}", @"https://github.com/VanHakobyan/ISTC_Coding_School_EmailManager/blob/master/EmailManager.Bll/EmsilSender.Console.Test/Statics/Template.jpg?raw=true")
+                     .Replace("{ImageUrl}", ImageUrl)
                      .Replace("{DateTimeNow}", DateTime.UtcNow.ToString(CultureInfo.InvariantCulture));
             }
             catch
