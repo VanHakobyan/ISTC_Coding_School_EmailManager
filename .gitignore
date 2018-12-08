@@ -329,3 +329,4 @@ ASALocalRun/
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
 /EmailManager.Bll/EmsilSender.Console.Test/App.config
+/EmailManager.Bll/EmailManager.WPF.Desktop/App.config
