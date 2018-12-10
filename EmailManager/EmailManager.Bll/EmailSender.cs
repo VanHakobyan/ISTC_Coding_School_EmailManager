@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using EmailManager.Common;
@@ -60,6 +61,19 @@ namespace EmailManager.Bll
 
             }
 
+        }
+
+
+        void SendEmailByCompany(string CompanyName)
+        {
+            var allContacts = DataBase.AllContacts;
+
+            var allContactsGroup = allContacts.Where(a => a.CompanyName == CompanyName).Select(a => a);
+
+            foreach (var item in allContactsGroup)
+            {
+                SendEmail(item);
+            }
         }
     }
 }
