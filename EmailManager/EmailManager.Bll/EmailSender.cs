@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Configuration;
 using System.Globalization;
 using System.IO;
@@ -30,7 +31,13 @@ namespace EmailManager.Bll
             {
                 return "";
             }
+
         }
+
+
+        
+
+        
 
         public void SendEmail(ContactModel contact)
         {
@@ -75,5 +82,14 @@ namespace EmailManager.Bll
                 SendEmail(item);
             }
         }
+
+        public void MultyEmailSender( List<ContactModel> contactModels)
+        {
+            foreach (var contact in contactModels)
+            {
+                SendEmail(contact);
+            }
+        }
+        
     }
 }

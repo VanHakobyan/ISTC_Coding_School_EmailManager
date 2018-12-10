@@ -49,7 +49,7 @@ namespace EmailManager.DB
 
         private static List<string> GetCompanies()
         {
-            return new List<string>();
+            return IstcContacts.Select(s => s.CompanyName).Distinct().ToList();
         }
 
         private static List<ContactModel> GetISTCContacts()
