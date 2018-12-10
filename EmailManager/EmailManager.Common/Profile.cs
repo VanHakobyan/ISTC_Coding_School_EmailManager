@@ -1,14 +1,5 @@
-﻿using System.Collections.Generic;
-
-namespace EmailManager.Bll
+﻿namespace EmailManager.Common
 {
-    public class Categores
-    {
-        public string CategoreName { get; set; }
-        public List<Profile> Profiles { get; set; }
-
-    }
-
     public class Profile
     {
         public string Nickname { get; set; }

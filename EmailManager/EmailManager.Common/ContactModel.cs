@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using Newtonsoft.Json;
-
-namespace EmailManager.Bll
+﻿namespace EmailManager.Common
 {
-    public class ContactResponseModel
+    public class ContactModel
     {
         public string FullName { get; set; }
         public string CompanyName { get; set; }

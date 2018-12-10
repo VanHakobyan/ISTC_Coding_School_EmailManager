@@ -4,18 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{99908AEC-AD51-4781-988A-4F0B9E2874BD}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>EmsilSender.Console.Test</RootNamespace>
-    <AssemblyName>EmsilSender.Console.Test</AssemblyName>
+    <ProjectGuid>{4E1EB22C-A91A-472F-8673-C0A9BF07ED92}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EmailManager.DB</RootNamespace>
+    <AssemblyName>EmailManager.DB</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -25,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -47,32 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="DataBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-    <None Include="Statics\contacts.json" />
-    <None Include="Statics\Employee.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EmailManager.Bll\EmailManager.Bll.csproj">
-      <Project>{9E14F01F-88B9-45C4-A3AA-647BC90C6BFA}</Project>
-      <Name>EmailManager.Bll</Name>
-    </ProjectReference>
     <ProjectReference Include="..\EmailManager.Common\EmailManager.Common.csproj">
       <Project>{3A6F1128-87AF-400B-A702-5CFD4DF6D396}</Project>
       <Name>EmailManager.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\EmailManager.DB\EmailManager.DB.csproj">
-      <Project>{16a816a7-4c74-470a-bc1e-5ef8ec498454}</Project>
-      <Name>EmailManager.DB</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Statics\Template.HTML" />
-    <Content Include="Statics\Template.jpg" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

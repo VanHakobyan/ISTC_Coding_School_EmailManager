@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmsilSender.Console.Test", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailManager.WPF.Desktop", "EmailManager.WPF.Desktop\EmailManager.WPF.Desktop.csproj", "{9B537A2E-7660-47B1-B07B-C90D53F1EA9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailManager.Common", "EmailManager.Common\EmailManager.Common.csproj", "{3A6F1128-87AF-400B-A702-5CFD4DF6D396}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailManager.DB", "EmailManager.DB\EmailManager.DB.csproj", "{4E1EB22C-A91A-472F-8673-C0A9BF07ED92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{9B537A2E-7660-47B1-B07B-C90D53F1EA9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B537A2E-7660-47B1-B07B-C90D53F1EA9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B537A2E-7660-47B1-B07B-C90D53F1EA9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A6F1128-87AF-400B-A702-5CFD4DF6D396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A6F1128-87AF-400B-A702-5CFD4DF6D396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A6F1128-87AF-400B-A702-5CFD4DF6D396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A6F1128-87AF-400B-A702-5CFD4DF6D396}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E1EB22C-A91A-472F-8673-C0A9BF07ED92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E1EB22C-A91A-472F-8673-C0A9BF07ED92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E1EB22C-A91A-472F-8673-C0A9BF07ED92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E1EB22C-A91A-472F-8673-C0A9BF07ED92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
