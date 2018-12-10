@@ -64,7 +64,7 @@ namespace EmailManager.Bll
         }
 
 
-        void SendEmailByCompany(string CompanyName)
+        public void SendEmailByCompany(string CompanyName)
         {
             var allContacts = DataBase.AllContacts;
 
