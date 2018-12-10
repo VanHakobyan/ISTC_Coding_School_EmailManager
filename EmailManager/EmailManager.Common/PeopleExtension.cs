@@ -12,6 +12,7 @@ namespace EmailManager.Common
         {
             //Asta masta
             // Edvin :P
+            //Astan shash a msov tchash a
             ContactModel myContact = new ContactModel
             {
                 FullName = $"{people.FirstName} {people.LastName}",
