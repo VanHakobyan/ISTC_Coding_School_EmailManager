@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using EmailManager.Bll;
+using EmailManager.DB;
 
 namespace EmailManager.WPF.Desktop
 {
@@ -20,9 +22,27 @@ namespace EmailManager.WPF.Desktop
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static EmailSender _sendEmail;
         public MainWindow()
         {
             InitializeComponent();
+            _sendEmail=new EmailSender();
+            DataBase.Init();
+            Emails.ItemsSource = DataBase.GetContacts().Select(x=>x.Email);
+            Companies.ItemsSource = DataBase.GetCompanies();
+        }
+
+        private void CompanySend_Click(object sender, RoutedEventArgs e)
+        {
+            var emailsSelectedValue = Emails.SelectedValue;
+            var contact = DataBase.AllContacts.FirstOrDefault(x => x.CompanyName != null && x.CompanyName == (string) emailsSelectedValue);
+        }
+
+        private void IndividualSend_Click(object sender, RoutedEventArgs e)
+        {
+            var emailsSelectedValue = Emails.SelectedValue;
+            var contact = DataBase.AllContacts.FirstOrDefault(x => x.Email != null && x.Email == (string)emailsSelectedValue);
+            _sendEmail.SendEmail(contact);
         }
     }
 }

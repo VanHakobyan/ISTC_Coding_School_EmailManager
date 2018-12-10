@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EmailManager.WPF.Desktop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Email Manager" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="59*"/>
+            <ColumnDefinition Width="13*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" ></RowDefinition >
+            <RowDefinition Height="Auto" ></RowDefinition >
+            <RowDefinition Height="Auto" ></RowDefinition >
+            <RowDefinition Height="Auto" ></RowDefinition >
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="30">
+            <ComboBox  x:Name="Companies" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" VerticalAlignment="Top" Width="144"  ></ComboBox>
+            <Button   x:Name="CompanySend" Content="Send Company" Margin="10" Click="CompanySend_Click"></Button>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Margin="30" >
+            <ComboBox  x:Name="Emails" HorizontalAlignment="Left" Height="23" Margin="10" VerticalAlignment="Top" Width="144"  />
+            <Button x:Name="IndividualSend" Content="Send" Margin="10" Width="69" Click="IndividualSend_Click"/>
+        </StackPanel>
+
     </Grid>
 </Window>
