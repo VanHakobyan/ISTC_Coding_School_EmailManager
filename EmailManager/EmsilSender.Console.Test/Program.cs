@@ -16,6 +16,7 @@ namespace EmsilSender.Console.Test
 
             var emailSender = new EmailSender();
             emailSender.SendEmail(new ContactModel { Email = "van19962013@mail.ru", CompanyName = "BetConstruct", Country = "Armenia", FullName = "Aram Zhamkochyan" });
+
         }
     }
 }

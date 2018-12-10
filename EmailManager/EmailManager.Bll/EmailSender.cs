@@ -9,12 +9,14 @@ using EmailManager.Common;
 using EmailManager.DB;
 using Newtonsoft.Json;
 
+
 namespace EmailManager.Bll
 {
+    
     public class EmailSender
     {
         private static readonly string ImageUrl = ConfigurationManager.AppSettings["ImageUrl"];
-        
+
         private string GetMessageText(ContactModel contact)
         {
             try
