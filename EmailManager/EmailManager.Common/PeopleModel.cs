@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmailManager.Common
 {
-  public  class PeopleModel
+    public class PeopleModel:PeopleBase
     {
         public string Email { get; set; }
         public string Phone { get; set; }
@@ -19,7 +19,7 @@ namespace EmailManager.Common
 
         }
 
-        public PeopleModel(string email, string phone, string country, string company,string title)
+        public PeopleModel(string email, string phone, string country, string company, string title)
         {
             Email = email;
             Phone = phone;

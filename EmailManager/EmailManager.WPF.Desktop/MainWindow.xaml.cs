@@ -26,16 +26,16 @@ namespace EmailManager.WPF.Desktop
         public MainWindow()
         {
             InitializeComponent();
-            _sendEmail=new EmailSender();
+            _sendEmail = new EmailSender();
             DataBase.Init();
-            Emails.ItemsSource = DataBase.IstcContacts.Select(x=>x.Email);
+            Emails.ItemsSource = DataBase.IstcContacts.Select(x => x.Email);
             Companies.ItemsSource = DataBase.Companies;
         }
 
         private void CompanySend_Click(object sender, RoutedEventArgs e)
         {
-            var emailsSelectedValue = Emails.SelectedValue;
-            var contact = DataBase.AllContacts.FirstOrDefault(x => x.CompanyName != null && x.CompanyName == (string) emailsSelectedValue);
+            var companiesSelectedValue = Companies.SelectedValue;
+            _sendEmail.SendEmailByCompany(companiesSelectedValue.ToString());
         }
 
         private void IndividualSend_Click(object sender, RoutedEventArgs e)

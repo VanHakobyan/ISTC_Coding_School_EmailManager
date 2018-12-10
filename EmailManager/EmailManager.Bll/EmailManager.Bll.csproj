@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContactGenderSorting.cs" />
     <Compile Include="EmailSender.cs" />
+    <Compile Include="MultyEmailSender.cs" />
     <Compile Include="GroupByTitle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
