@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EmailManager.Bll;
+using EmailManager.Common;
+using Newtonsoft.Json;
 
 namespace EmsilSender.Console.Test
 {
@@ -11,8 +13,9 @@ namespace EmsilSender.Console.Test
     {
         static void Main(string[] args)
         {
-            EmailSender emailSender=new EmailSender();
-            emailSender.SendEmail(new ContactResponseModel{Email = "vanhakobyan1996@gmail.com",CompanyName ="ISTC",Country = "Armenia",FullName = "Vanik Hakobyan"});
+
+            var emailSender = new EmailSender();
+            emailSender.SendEmail(new ContactModel { Email = "van19962013@mail.ru", CompanyName = "BetConstruct", Country = "Armenia", FullName = "Aram Zhamkochyan" });
         }
     }
 }

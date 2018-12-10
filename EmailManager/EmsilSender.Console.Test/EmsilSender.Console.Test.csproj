@@ -8,10 +8,11 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>EmsilSender.Console.Test</RootNamespace>
     <AssemblyName>EmsilSender.Console.Test</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,11 +52,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Statics\contacts.json" />
+    <None Include="Statics\Employee.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EmailManager.Bll\EmailManager.Bll.csproj">
       <Project>{9E14F01F-88B9-45C4-A3AA-647BC90C6BFA}</Project>
       <Name>EmailManager.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmailManager.Common\EmailManager.Common.csproj">
+      <Project>{3A6F1128-87AF-400B-A702-5CFD4DF6D396}</Project>
+      <Name>EmailManager.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmailManager.DB\EmailManager.DB.csproj">
+      <Project>{16a816a7-4c74-470a-bc1e-5ef8ec498454}</Project>
+      <Name>EmailManager.DB</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
