@@ -30,7 +30,13 @@ namespace EmailManager.Bll
             {
                 return "";
             }
+
         }
+
+
+        
+
+        
 
         public void SendEmail(ContactModel contact)
         {
