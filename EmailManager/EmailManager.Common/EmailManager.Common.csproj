@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Contact.cs" />
     <Compile Include="ContactModel.cs" />
+    <Compile Include="PeopleModel.cs" />
     <Compile Include="Profile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
