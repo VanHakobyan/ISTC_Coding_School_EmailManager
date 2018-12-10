@@ -73,9 +73,9 @@ namespace EmailManager.Bll
 
         public void SendEmailByCompany(string CompanyName)
         {
-            var allContacts = DataBase.AllContacts;
+            var allContacts = DataBase.IstcContacts;
 
-            var allContactsGroup = allContacts.Where(a => a.CompanyName == CompanyName).Select(a => a);
+            var allContactsGroup = allContacts.Where(a => a.CompanyName == CompanyName);
 
             foreach (var item in allContactsGroup)
             {

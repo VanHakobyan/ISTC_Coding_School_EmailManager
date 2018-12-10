@@ -8,7 +8,7 @@ namespace EmailManager.Bll
 {
     public class ContactGenderSorting
     {
-        Common.ContactModel SortedList = DB.DataBase.AllContacts.GroupBy(s => Gender).OrderBy(s1 => s1.Age).Select(s1 => new { s1.contact }).ToList();
+        //Common.ContactModel SortedList = DB.DataBase.AllContacts.GroupBy(s => Gender).OrderBy(s1 => s1.Age).Select(s1 => new { s1.contact }).ToList();
 
     }
 
