@@ -4,12 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EmailManager.Common;
+using EmailManager.DB;
 
 namespace EmailManager.Bll
 {
     public class ContactGenderSorting
     {
-        Common.ContactModel SortedList = DB.DataBase.AllContacts.GroupBy(s => Gender).OrderBy(s1 => s1.Age).Select(s1 => new { s1.contact }).ToList();
+        public void Sort()
+        {
+            EmailSender emailSender = new EmailSender();
+            var contacts = DataBase.IstcContacts.OrderBy(x => x.CompanyName).OrderBy(x => x.FullName).ToList();
+            emailSender.MultyEmailSender(contacts);
+        }
 
     }
 
