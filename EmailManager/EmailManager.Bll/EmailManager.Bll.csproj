@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>EmailManager.Bll</RootNamespace>
     <AssemblyName>EmailManager.Bll</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,14 +46,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Categores.cs" />
-    <Compile Include="ContactResponseModel.cs" />
     <Compile Include="EmailSender.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="contacts.json" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EmailManager.Common\EmailManager.Common.csproj">
+      <Project>{3A6F1128-87AF-400B-A702-5CFD4DF6D396}</Project>
+      <Name>EmailManager.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmailManager.DB\EmailManager.DB.csproj">
+      <Project>{16A816A7-4C74-470A-BC1E-5EF8EC498454}</Project>
+      <Name>EmailManager.DB</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

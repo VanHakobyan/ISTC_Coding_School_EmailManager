@@ -5,6 +5,8 @@ using System.Globalization;
 using System.IO;
 using System.Net;
 using System.Net.Mail;
+using EmailManager.Common;
+using EmailManager.DB;
 using Newtonsoft.Json;
 
 namespace EmailManager.Bll
@@ -12,31 +14,13 @@ namespace EmailManager.Bll
     public class EmailSender
     {
         private static readonly string ImageUrl = ConfigurationManager.AppSettings["ImageUrl"];
-        private List<ContactResponseModel> contactResponseModels;
-
-        public EmailSender()
-        {
-            var json = File.ReadAllText($"{Directory.GetCurrentDirectory()}/contacts.json");
-            var contacts = JsonConvert.DeserializeObject<List<Profile>>(json);
-            FactoryModel(contacts);
-        }
-
-        private void FactoryModel(List<Profile> contacts)
-        {
-            contactResponseModels = new List<ContactResponseModel>();
-            foreach (var contact in contacts)
-            {
-                contactResponseModels.Add(new ContactResponseModel { Email = contact.eMail, FullName = contact.Nickname });
-            }
-        }
-
-        private string GetMessageText(ContactResponseModel contact)
+        
+        private string GetMessageText(ContactModel contact)
         {
             try
             {
-                var templateText = File.ReadAllText($"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName}\\statics\\Template.html");
                 return
-                    templateText.Replace("{FullName}", contact.FullName)
+                      DataBase.GetTemplate().Replace("{FullName}", contact.FullName)
                      .Replace("{Company}", contact.CompanyName)
                      .Replace("{ImageUrl}", ImageUrl)
                      .Replace("{DateTimeNow}", DateTime.UtcNow.ToString(CultureInfo.InvariantCulture));
@@ -47,7 +31,7 @@ namespace EmailManager.Bll
             }
         }
 
-        public void SendEmail(ContactResponseModel contact)
+        public void SendEmail(ContactModel contact)
         {
 
             using (var msg = new MailMessage())
@@ -77,12 +61,5 @@ namespace EmailManager.Bll
             }
 
         }
-
-        public void SendEmailList(int count)
-        {
-            for (int i = 0; i < count; i++)
-                SendEmail(contactResponseModels[i]);
-        }
-
     }
 }
