@@ -3,12 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EmailManager.Common;
 
 namespace EmailManager.Bll
 {
     public class ContactGenderSorting
     {
-        Common.ContactModel SortedList = DB.DataBase.AllContacts.GroupBy(s => Gender).OrderBy(s1 => s1.Age).Select(s1 => new { s1.contact }).ToList();
+        public void Sort()
+        {
+            var SortedList = DB.DataBase.IstcContacts.OrderBy(s => s.Country).GroupBy(x => x.CompanyName).ToList();
+            foreach (var item in SortedList)
+            {
+                
+            }
+        }
 
     }
 
