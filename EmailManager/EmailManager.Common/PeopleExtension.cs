@@ -11,6 +11,7 @@ namespace EmailManager.Common
         public static ContactModel GetContact(this PeopleModel people)
         {
             //Asta masta
+            // Edvin :P
             ContactModel myContact = new ContactModel
             {
                 FullName = $"{people.FirstName} {people.LastName}",
