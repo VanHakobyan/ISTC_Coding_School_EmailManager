@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmailManager.Common
 {
-    class PeopleBase
+    public class PeopleBase
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
