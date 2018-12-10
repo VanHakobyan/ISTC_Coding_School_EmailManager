@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmailManager.Common
 {
-    class PeopleModel:PeopleBase
+    public class PeopleModel:PeopleBase
     {
         public string Email { get; set; }
         public string Phone { get; set; }
@@ -27,5 +27,6 @@ namespace EmailManager.Common
             Company = company;
             Title = title;
         }
+        
     }
 }

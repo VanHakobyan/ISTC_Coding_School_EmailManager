@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Configuration;
 using System.Globalization;
 using System.IO;
@@ -10,12 +11,14 @@ using EmailManager.Common;
 using EmailManager.DB;
 using Newtonsoft.Json;
 
+
 namespace EmailManager.Bll
 {
+    
     public class EmailSender
     {
         private static readonly string ImageUrl = ConfigurationManager.AppSettings["ImageUrl"];
-        
+
         private string GetMessageText(ContactModel contact)
         {
             try
@@ -72,14 +75,23 @@ namespace EmailManager.Bll
 
         public void SendEmailByCompany(string CompanyName)
         {
-            var allContacts = DataBase.AllContacts;
+            var allContacts = DataBase.IstcContacts;
 
-            var allContactsGroup = allContacts.Where(a => a.CompanyName == CompanyName).Select(a => a);
+            var allContactsGroup = allContacts.Where(a => a.CompanyName == CompanyName);
 
             foreach (var item in allContactsGroup)
             {
                 SendEmail(item);
             }
         }
+
+        public void MultyEmailSender( List<ContactModel> contactModels)
+        {
+            foreach (var contact in contactModels)
+            {
+                SendEmail(contact);
+            }
+        }
+        
     }
 }

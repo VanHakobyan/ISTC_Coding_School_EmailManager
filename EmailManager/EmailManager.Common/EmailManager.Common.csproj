@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PeopleBase.cs" />
+    <Compile Include="Contact.cs" />
     <Compile Include="ContactModel.cs" />
     <Compile Include="PeopleModel.cs" />
     <Compile Include="PeopleExtension.cs" />
