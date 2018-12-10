@@ -9,14 +9,7 @@ namespace EmailManager.Bll
 {
     public class ContactGenderSorting
     {
-        public void Sort()
-        {
-            var SortedList = DB.DataBase.IstcContacts.OrderBy(s => s.Country).GroupBy(x => x.CompanyName).ToList();
-            foreach (var item in SortedList)
-            {
-                
-            }
-        }
+        Common.ContactModel SortedList = DB.DataBase.AllContacts.GroupBy(s => Gender).OrderBy(s1 => s1.Age).Select(s1 => new { s1.contact }).ToList();
 
     }
 
