@@ -10,11 +10,13 @@ namespace EmailManager.Common
     {
         public static ContactModel GetContact(this PeopleModel people)
         {
-            ContactModel myContact = new ContactModel();
-            myContact.FullName = $"{people.FirstName} {people.LastName}";
-            myContact.Email = people.Email;
-            myContact.Country = people.Country;
-            myContact.CompanyName = people.Company;
+            ContactModel myContact = new ContactModel
+            {
+                FullName = $"{people.FirstName} {people.LastName}",
+                Email = people.Email,
+                Country = people.Country,
+                CompanyName = people.Company
+            };
 
             return myContact;
         }
