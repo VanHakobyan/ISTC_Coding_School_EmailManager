@@ -6,11 +6,19 @@ using System.Threading.Tasks;
 
 namespace EmailManager.Common
 {
-    class PeopleExtension
+    static class PeopleExtension
     {
         public static ContactModel GetContact(this PeopleModel people)
         {
-            ContactModel myContact = new ContactModel { FullName = people.}
+            ContactModel myContact = new ContactModel
+            {
+                FullName = $"{people.FirstName} {people.LastName}",
+                Email = people.Email,
+                Country = people.Country,
+                CompanyName = people.Company
+            };
+
+            return myContact;
         }
     }
 }
