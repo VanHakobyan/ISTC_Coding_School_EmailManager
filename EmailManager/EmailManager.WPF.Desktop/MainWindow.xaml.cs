@@ -28,8 +28,8 @@ namespace EmailManager.WPF.Desktop
             InitializeComponent();
             _sendEmail=new EmailSender();
             DataBase.Init();
-            Emails.ItemsSource = DataBase.GetContacts().Select(x=>x.Email);
-            Companies.ItemsSource = DataBase.GetCompanies();
+            Emails.ItemsSource = DataBase.IstcContacts.Select(x=>x.Email);
+            Companies.ItemsSource = DataBase.Companies;
         }
 
         private void CompanySend_Click(object sender, RoutedEventArgs e)
