@@ -8,5 +8,9 @@ namespace EmailManager.Common
 {
     class PeopleExtension
     {
+        public static ContactModel GetContact(this PeopleModel people)
+        {
+            ContactModel myContact = new ContactModel { FullName = people.}
+        }
     }
 }
