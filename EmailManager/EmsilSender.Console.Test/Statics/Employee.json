@@ -1,74 +1,80 @@
 [
-    {
-		"FullName": "Vanik Hakobyan",
-		"CompanyName": "ISTC",
-		"Country": "Armenia",
-		"Email": "VanHakobyan1996@gmail.com"
-	},
-	{
-		"FullName": "Edvin Hakobyan",
-		"CompanyName": "Amazon",
-		"Country": "Armenia",
-		"Email": "edvin-hakobyan@mail.ru"
-	},
-	{
-		"FullName": "Levon Aramyan",
-		"CompanyName": "Microsoft",
-		"Country": "Armenia",
-		"Email": "levonaramyan@gmail.com"
-	},
-	{
-		"FullName": "Zorayr Baghdasaryan",
-		"CompanyName": "Oracle",
-		"Country": "Armenia",
-		"Email": "zorayrbaghdasaryan@gmail.com"
-	},
-	{
-		"FullName": "Zohrab Karapetyan",
-		"CompanyName": "Microsoft",
-		"Country": "Armenia",
-		"Email": "zohrab.karapetyan1983@gmail.com"
-	},
-	{
-		"FullName": "Lusine Duryan",
-		"CompanyName": "Microsoft",
-		"Country": "Armenia",
-		"Email": "lusineduryan@mail.ru"
-	},
-	{
-		"FullName": "Pargev",
-		"CompanyName": "Oracle",
-		"Country": "Armenia",
-		"Email": "pqoalla@gmail.com"
-	},
-	{
-		"FullName": "Vard Khachatryan",
-		"CompanyName": "Microsoft",
-		"Country": "Armenia",
-		"Email": "vard.khachatryan1996@gmail.com"
-	},
-	{
-		"FullName": "Astghik Hovhannisyan",
-		"CompanyName": "Microsoft",
-		"Country": "Armenia",
-		"Email": "asta21ua@yahoo.com"
-	},
-	{
-		"FullName": "Edmon Grigoryan",
-		"CompanyName": "Oracle",
-		"Country": "Armenia",
-		"Email": "edmon.grigoryan23@gmail.com"
-	},
-	{
-		"FullName": "Suren Vanyan",
-		"CompanyName": "Amazon",
-		"Country": "Armenia",
-		"Email": "surenvanyan@gmail.com"
-	},
-	{
-		"FullName": "Hovhannes Hovakimyan",
-		"CompanyName": "Amazon",
-		"Country": "Armenia",
-		"Email": "hovhannes.hovakimyan@gmail.com"
-	}
+  {
+    "FullName": "Mariam Simonyan",
+    "CompanyName": "ISTC",
+    "Country": "Armenia",
+    "Email": "msimonyan97@gmail.com"
+  },
+  {
+    "FullName": "Vanik Hakobyan",
+    "CompanyName": "ISTC",
+    "Country": "Armenia",
+    "Email": "VanHakobyan1996@gmail.com"
+  },
+  {
+    "FullName": "Edvin Hakobyan",
+    "CompanyName": "Amazon",
+    "Country": "Armenia",
+    "Email": "edvin-hakobyan@mail.ru"
+  },
+  {
+    "FullName": "Levon Aramyan",
+    "CompanyName": "Microsoft",
+    "Country": "Armenia",
+    "Email": "levonaramyan@gmail.com"
+  },
+  {
+    "FullName": "Zorayr Baghdasaryan",
+    "CompanyName": "Oracle",
+    "Country": "Armenia",
+    "Email": "zorayrbaghdasaryan@gmail.com"
+  },
+  {
+    "FullName": "Zohrab Karapetyan",
+    "CompanyName": "Microsoft",
+    "Country": "Armenia",
+    "Email": "zohrab.karapetyan1983@gmail.com"
+  },
+  {
+    "FullName": "Lusine Duryan",
+    "CompanyName": "Microsoft",
+    "Country": "Armenia",
+    "Email": "lusineduryan@mail.ru"
+  },
+  {
+    "FullName": "Pargev",
+    "CompanyName": "Oracle",
+    "Country": "Armenia",
+    "Email": "pqoalla@gmail.com"
+  },
+  {
+    "FullName": "Vard Khachatryan",
+    "CompanyName": "Microsoft",
+    "Country": "Armenia",
+    "Email": "vard.khachatryan1996@gmail.com"
+  },
+  {
+    "FullName": "Astghik Hovhannisyan",
+    "CompanyName": "Microsoft",
+    "Country": "Armenia",
+    "Email": "asta21ua@yahoo.com"
+  },
+  {
+    "FullName": "Edmon Grigoryan",
+    "CompanyName": "Oracle",
+    "Country": "Armenia",
+    "Email": "edmon.grigoryan23@gmail.com"
+  },
+  {
+    "FullName": "Suren Vanyan",
+    "CompanyName": "Amazon",
+    "Country": "Armenia",
+    "Email": "surenvanyan@gmail.com"
+  },
+  {
+    "FullName": "Hovhannes Hovakimyan",
+    "CompanyName": "Amazon",
+    "Country": "Armenia",
+    "Email": "hovhannes.hovakimyan@gmail.com"
+  }
 ]
