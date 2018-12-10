@@ -44,5 +44,6 @@ namespace EmailManager.WPF.Desktop
             var contact = DataBase.AllContacts.FirstOrDefault(x => x.Email != null && x.Email == (string)emailsSelectedValue);
             _sendEmail.SendEmail(contact);
         }
+       
     }
 }

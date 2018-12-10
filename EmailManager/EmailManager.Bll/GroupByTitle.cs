@@ -4,19 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EmailManager.Common;
+using EmailManager.DB;
 
 namespace EmailManager.Bll
 {
     class GroupByTitle
     {
-        public static void SortByCompany(List<PeopleModel> models)
+        private EmailSender _emailSender;
+
+        public GroupByTitle()
         {
-            var companys = models.Select(s => s.Company).OrderByDescending(o=>o).ToList();
+            _emailSender = new EmailSender();
+        }
 
-                        
+        public void SendSeveralEmails()
+        {
+            var sortedContacts = DataBase.IstcContacts.OrderByDescending(o => o.CompanyName);
 
-
-
+            foreach (var item in sortedContacts)
+            {
+                _emailSender.SendEmail(item);
+            }
         }
     }
 }
