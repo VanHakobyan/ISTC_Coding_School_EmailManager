@@ -23,7 +23,7 @@
             <Button   x:Name="CompanySend" Content="Send Company" Margin="10" Click="CompanySend_Click"></Button>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Margin="30" >
-            <ComboBox  x:Name="Emails" HorizontalAlignment="Left" Height="23" Margin="10" VerticalAlignment="Top" Width="144"  />
+            <ComboBox  x:Name="Emails" HorizontalAlignment="Left" Height="23" Margin="10" VerticalAlignment="Top" Width="144" SelectionChanged="Emails_SelectionChanged"  />
             <Button x:Name="IndividualSend" Content="Send" Margin="10" Width="69" Click="IndividualSend_Click"/>
         </StackPanel>
 
