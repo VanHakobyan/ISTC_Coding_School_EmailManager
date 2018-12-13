@@ -36,11 +36,6 @@ namespace EmailManager.Bll
 
         }
 
-
-        
-
-        
-
         public void SendEmail(ContactModel contact)
         {
 
